@@ -124,7 +124,7 @@
     width: 100%;
 }
 
-@media (hover: hover) {
+@media (any-hover: hover) {
     .linkToGithubSpan:hover {
         background: rgba(255, 106, 20, 0.75);
     }
@@ -149,7 +149,7 @@
     width: 100%;
 }
 
-@media (hover: hover) {
+@media (any-hover: hover) {
     .linkToSiteSpan:hover {
         background: rgba(255, 106, 20, 0.75);
     }
@@ -182,7 +182,7 @@
     width: auto;
 }
 
-@media (hover: hover) {
+@media (any-hover: hover) {
     .fartButton:hover {
         background-color: rgb(50 173 230);
         color: white;
@@ -213,7 +213,7 @@
     width: auto;
 }
 
-@media (hover: hover) {
+@media (any-hover: hover) {
     .otherFartButton:hover {
         cursor: pointer;
         background-color: rgb(10, 132, 255);
