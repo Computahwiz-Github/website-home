@@ -118,10 +118,8 @@
     background: url(../images/NoiseAsset_256X256_PNG.png);
     opacity: .05;
     content: '';
-
     display: block;
     position: absolute;
-
 }
 
 @media (any-hover: hover) {
@@ -143,10 +141,8 @@
     background: url(../images/NoiseAsset_256X256_PNG.png);
     opacity: .05;
     content: '';
-
     display: block;
     position: absolute;
-
 }
 
 @media (any-hover: hover) {
