@@ -27,6 +27,7 @@
 .header::after {
     background: url(../images/NoiseAsset_256X256_PNG.png);
     opacity: .05;
+    border-radius: 25px;
     content: '';
     height: 100%;
     display: block;
