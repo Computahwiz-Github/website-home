@@ -9,6 +9,13 @@ body {
     align-items: center;
 }
 
+.headerBar {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    background: black;
+}
+
 .header {
     white-space: wrap;
     width: 35%;
