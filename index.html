@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- <script src='https://github.com/processing/p5.js/releases/download/v1.9.3/p5.js'></script> -->
+    <script src='index.js'></script>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Isaiah's Website</title>
+</head>
+<body>
+    <div class="acrylic background">
+        <style>
+            body {
+                min-height: 100vh;
+                background: url(./castle.jpg) center/cover no-repeat;
+                /* background: url(/NoiseAsset_256X256_PNG.png); */
+                /* background-size: cover; */
+                /* background-position: center; */
+                position: relative;
+                background-attachment: fixed;
+                /* background: rgba(0,0,0,0.5); */
+                /* -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px); */
+                margin: 0;
+            }
+
+            /* body::before {
+                background-color: rgba(0, 0, 0, 0.795);
+                opacity: .8;
+                content: '';
+                height: 100%;
+                display: block;
+                position: absolute;
+                width: 100%;
+            } */
+        </style>
+    </div>
+    <div class="flexContainer">
+        <h1 class="flexContainer header">Hello, World. This Is a Test Header!</h1>
+        <p class="flexContainer testParagraph" title="Click on a faht button Petah">
+            Below, you should be able to press one of the <span class="buttonInstruction">- Fart Buttons - </span>to make a big ol' hoot and holler.
+        </p>
+        
+        <div class="linkButtonsWrapper">
+            <span class="linkButtonsWrapper linkToGithubSpan" onclick="openLinkToGithub()" title="Minecraft Death Statues Mod - Github">
+                Open Github Repo
+            </span>    
+            <span class="linkButtonsWrapper linkToSiteSpan" onclick="openLinkToSite()" title="Me Website">
+                Open Me Website
+            </span>
+        </div>
+
+        <div class="buttonWrapper">
+            <button class="buttonWrapper fartButton" onclick="playMeAGoodFartJamie()"
+             title="See what happens when ye click me">Button That Makes Ye Faht</button>
+            <button class="buttonWrapper otherFartButton" onclick="letMeHearAnotherSean()"
+             title="Ooo I just might fart too. Hey that rhymed!">Other Button That Makes Ya Fart</button>
+        </div>
+    </div>
+</body>
+</html>
