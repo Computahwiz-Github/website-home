@@ -9,11 +9,11 @@ function openLinkToSite() {
 }
 
 function playMeAGoodFartJamie() {
-    var audio = new Audio('./Fart.mp3');
+    var audio = new Audio('../audio/Fart.mp3');
     audio.play();
 }
 
 function letMeHearAnotherSean() {
-    var audio = new Audio('./FartReverb.mp3');
+    var audio = new Audio('../audio/FartReverb.mp3');
     audio.play();
 }
