@@ -19,8 +19,7 @@ body {
 }
 
 .profilePicture {
-    width: 180px;
-    height: 180px;
+    max-width: 100%;
     display: inline-block;
 }
 
