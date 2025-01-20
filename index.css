@@ -22,7 +22,6 @@ body {
     background: rgba(87, 87, 87, 0.4);
     backdrop-filter: blur(10px);
     color: white;
-    font-size: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +58,7 @@ body {
     border-radius: 15px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 750px) {
     .linkButtonsWrapper {
         font-size: .9rem;
     }
