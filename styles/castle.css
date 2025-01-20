@@ -124,8 +124,10 @@
     width: 100%;
 }
 
-.linkToGithubSpan:hover {
-    background: rgba(255, 106, 20, 0.75);
+@media (hover: hover) {
+    .linkToGithubSpan:hover {
+        background: rgba(255, 106, 20, 0.75);
+    }
 }
 
 .linkToSiteSpan {
@@ -147,8 +149,10 @@
     width: 100%;
 }
 
-.linkToSiteSpan:hover {
-    background: rgba(255, 106, 20, 0.75);
+@media (hover: hover) {
+    .linkToSiteSpan:hover {
+        background: rgba(255, 106, 20, 0.75);
+    }
 }
 
 .buttonWrapper {
@@ -178,13 +182,15 @@
     width: auto;
 }
 
-.fartButton:hover {
-    background-color: rgb(50 173 230);
-    color: white;
-    transform: scale3d(1.2, 1.2, 1);
-    transition: all 0.1s ease-in-out;
-    box-shadow: 0 5px #666;
-    cursor: pointer;
+@media (hover: hover) {
+    .fartButton:hover {
+        background-color: rgb(50 173 230);
+        color: white;
+        transform: scale3d(1.2, 1.2, 1);
+        transition: all 0.1s ease-in-out;
+        box-shadow: 0 5px #666;
+        cursor: pointer;
+    }
 }
 
 .fartButton:active {
@@ -207,12 +213,13 @@
     width: auto;
 }
 
-.otherFartButton:hover {
-    cursor: pointer;
-    background-color: rgb(10, 132, 255);
-    color: white;
-    transform: scale3d(1.2, 1.2, 1);
-    
+@media (hover: hover) {
+    .otherFartButton:hover {
+        cursor: pointer;
+        background-color: rgb(10, 132, 255);
+        color: white;
+        transform: scale3d(1.2, 1.2, 1);
+    }
 }
 
 .otherFartButton:active {
