@@ -18,6 +18,12 @@ body {
     margin-bottom: 2em;
 }
 
+.profilePicture {
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+}
+
 .header {
     white-space: wrap;
     width: 35%;
