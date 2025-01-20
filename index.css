@@ -14,8 +14,6 @@ body {
     height: 50px;
     display: flex;
     background: black;
-    padding: 2%;
-    margin-bottom: 2em;
 }
 
 .profilePicture {
