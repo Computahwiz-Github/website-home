@@ -19,8 +19,9 @@ body {
 }
 
 .profilePicture {
-    max-width: 100%;
-    display: inline-block;
+    width: 180px;
+    height: 180px:
+    display: inline-flex;
 }
 
 .header {
