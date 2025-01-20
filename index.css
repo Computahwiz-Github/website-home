@@ -29,10 +29,7 @@
     opacity: .05;
     border-radius: 25px;
     content: '';
-    height: 100%;
     display: block;
-    position: absolute;
-    width: 100%;
 }
 
 @media (max-width: 1000px) {
