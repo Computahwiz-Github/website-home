@@ -11,7 +11,7 @@ body {
 
 .headerBar {
     width: 100%;
-    height: fit-content;
+    height: 50px;
     display: flex;
     background: black;
 }
