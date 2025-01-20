@@ -19,8 +19,7 @@ body {
 .profilePicture {
     width: 25px;
     height: 25px;
-    display: block;
-    position: static;
+    display: flex;
     z-index: auto;
 }
 
