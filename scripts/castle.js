@@ -1,11 +1,11 @@
 function openLinkToGithub() {
     console.log('Clicked Span');
-    window.open("https://github.com/Computahwiz-Github/Death-Statues-Mod-1.20.X", '_blank');
+    location.assign("https://github.com/Computahwiz-Github/Death-Statues-Mod-1.20.X");
 }
 
 function openLinkToSite() {
     console.log('Clicked Span');
-    window.open("https://www.isaiah.digital", '_blank');
+    location.assign("https://www.isaiah.digital");
 }
 
 function playMeAGoodFartJamie() {
