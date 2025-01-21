@@ -15,10 +15,21 @@
 <body>
     <div class="flexContainer">
         <header class="headerBar">
-            <img class="profilePicture" src="./images/castle/favicon.png" />  
+            <div class="leftHeaderColumn">
+                <img class="profilePicture" src="./images/castle/favicon.png" />
+            </div>
+            <div class="centerHeaderColumn">
+                <img class="logo" src="./images/Logo.png" />
+            </div>
+            <div class="rightHeaderColumn"></div>
         </header>
-        <h1 class="header">Welcome, Check Out My Projects!</h1>
-        
+
+        <h1 class="welcomeBox" id="welcomeBox">Welcome, Check Out My Projects!
+            <a class="closeWelcomeBox" href="#" onclick="closeWelcomeBoxClick()">
+                <img src="./icons/close-filled.svg" height="20px" width="20px"/>
+            </a>
+        </h1>
+
         <div class="linkButtonsWrapper">
             <span class="linkButtonsWrapper linkToGithubSpan" onclick="openLinkToGithub()" title="Minecraft Death Statues Mod - Github">
                 Open Github Repo

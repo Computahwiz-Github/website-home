@@ -29,7 +29,27 @@ body {
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
 }
 
-.header {
+.logo {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.leftHeaderColumn, .rightHeaderColumn {
+    flex: 1;
+}
+
+.closeWelcomeBox {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    z-index: 1;
+}
+
+.welcomeBox {
     white-space: wrap;
     width: 55%;
     height: fit-content;
@@ -48,7 +68,8 @@ body {
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
 }
 
-.header::after {
+.welcomeBox::after {
+    opacity: .05;
     content: '';
     height: 100%;
     display: block;
@@ -58,7 +79,7 @@ body {
 }
 
 @media (max-width: 750px) {
-    .header {
+    .welcomeBox {
         width: 75%;
         font-size: 1.5rem;
         margin-bottom: 10%;
