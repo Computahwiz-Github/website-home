@@ -24,6 +24,7 @@ body {
     height: 48px;
     display: flex;
     padding: 5px;
+    padding-left: 10px;
     z-index: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
@@ -45,6 +46,7 @@ body {
     display: flex;
     margin-left: auto;
     padding: 5px;
+    padding-right: 10px;
 }
 
 .leftHeaderColumn, .rightHeaderColumn {
