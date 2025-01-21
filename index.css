@@ -16,7 +16,7 @@ body {
     height: 75px;
     display: flex;
     align-items: center;
-    background: black;
+    background: #3d3d3d;
 }
 
 .profilePicture {
