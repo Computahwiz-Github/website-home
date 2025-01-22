@@ -44,9 +44,9 @@ body {
     width: 48px;
     height: 48px;
     display: flex;
-    margin-right: auto;
     padding: 5px;
     margin-left: 1em;
+    margin-right: auto;
 }
 
 .leftHeaderColumn, .rightHeaderColumn {
