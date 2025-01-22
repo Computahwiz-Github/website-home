@@ -89,8 +89,8 @@ body {
     height: 20px;
     width: 20px;
     position: fixed;
-    top: -5rem;
-    right: 2rem;
+    top: -0.75rem;
+    right: 0.5rem;
     z-index: 1;
 }
 
