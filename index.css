@@ -44,7 +44,7 @@ body {
     z-index: 2;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 850px) {
     .logo {
         width: 150px;
         height: 150px;
@@ -72,6 +72,13 @@ body {
     top: -5rem;
     right: 2rem;
     z-index: 1;
+}
+
+@media (max-width: 850px) {
+    .closeWelcomeBox {
+        top: -8rem;
+        right: 5rem;
+    }
 }
 
 .welcomeBox {
@@ -106,7 +113,7 @@ body {
     z-index: 0;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 850px) {
     .welcomeBox {
         width: 75%;
         font-size: 1.5rem;
@@ -129,7 +136,7 @@ body {
     border-radius: 15px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 850px) {
     .linkButtonsWrapper {
         font-size: .9rem;
     }
