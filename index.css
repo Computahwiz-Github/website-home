@@ -11,7 +11,7 @@ body {
 
 .headerBar {
     margin: 0 0;
-    width: 100vw;
+    width: 100%;
     height: 75px;
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@ body {
     z-index: 2;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
     .logo {
         width: 150px;
         height: 150px;
@@ -74,7 +74,7 @@ body {
     z-index: 1;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
     .closeWelcomeBox {
         top: -8rem;
         right: 5rem;
@@ -113,7 +113,7 @@ body {
     z-index: 0;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
     .welcomeBox {
         width: 75%;
         font-size: 1.5rem;
@@ -136,7 +136,7 @@ body {
     border-radius: 15px;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
     .linkButtonsWrapper {
         font-size: .9rem;
     }
