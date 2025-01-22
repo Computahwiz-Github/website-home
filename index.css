@@ -22,7 +22,8 @@ body {
     height: 48px;
     display: flex;
     padding: 5px;
-    margin-right: 1rem;
+    margin-left: auto;
+    margin-right: 1em;
     z-index: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -44,7 +45,7 @@ body {
     display: flex;
     margin-right: auto;
     padding: 5px;
-    padding-left: 1rem;
+    margin-left: 1em;
 }
 
 .leftHeaderColumn, .rightHeaderColumn {
@@ -55,8 +56,8 @@ body {
     height: 20px;
     width: 20px;
     position: absolute;
-    top: -1rem;
-    right: 1rem;
+    top: -1%;
+    right: 10%;
     z-index: 1;
 }
 
