@@ -101,6 +101,7 @@ body {
     .welcomeBox {
         width: 75%;
         font-size: 1.5rem;
+        margin-too: 1rem;
         margin-bottom: 10%;
         border-radius: 25px;
         z-index: 0;
