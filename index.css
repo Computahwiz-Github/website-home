@@ -10,8 +10,7 @@ body {
 }
 
 .headerBar {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 0;
     height: 75px;
     display: flex;
     align-items: center;
@@ -25,7 +24,7 @@ body {
     padding: 5px;
     margin-left: auto;
     margin-right: 1em;
-    z-index: auto;
+    z-index: 2;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -38,6 +37,7 @@ body {
     margin-bottom: 1rem;
     padding: 5px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .burgerMenu {
@@ -47,6 +47,7 @@ body {
     padding: 5px;
     margin-left: 1em;
     margin-right: auto;
+    z-index: 2;
 }
 
 .leftHeaderColumn, .rightHeaderColumn {
@@ -57,8 +58,8 @@ body {
     height: 20px;
     width: 20px;
     position: absolute;
-    top: -1%;
-    right: 10%;
+    top: -10%;
+    right: 20%;
     z-index: 1;
 }
 
