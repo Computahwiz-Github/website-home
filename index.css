@@ -1,7 +1,6 @@
 body {
     background-color: #232323;
     margin: 0 0;
-    z-index: auto;
 }
 
 .flexContainer {
@@ -60,9 +59,9 @@ body {
     height: 20px;
     width: 20px;
     position: absolute;
-    top: -10%;
-    right: 20%;
-    z-index: 1;
+    top: -20%;
+    right: 50%;
+    z-index: 0;
 }
 
 .welcomeBox {
