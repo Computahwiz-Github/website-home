@@ -60,6 +60,13 @@ body {
     z-index: 2;
 }
 
+@media only screen (max-width: 950px) {
+    .burgerMenu {
+        width: 36px;
+        height: 36px;
+    }
+}
+
 .leftHeaderColumn, .rightHeaderColumn {
     flex: 1;
 }
