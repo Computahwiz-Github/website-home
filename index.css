@@ -12,7 +12,7 @@ body {
 
 .headerBar {
     margin: 0 0;
-    width: 100%;
+    width: 100vw;
     height: 75px;
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@ body {
     border-radius: 25px;
     margin-top: 1em;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
-    z-index: auto;
+    z-index: 0;
 }
 
 .welcomeBox::after {
@@ -94,6 +94,7 @@ body {
     position: absolute;
     border-radius: 25px;
     width: 100%;
+    z-index: 0;
 }
 
 @media (max-width: 750px) {
@@ -139,6 +140,7 @@ body {
     content: '';
     display: block;
     position: absolute;
+    z-index: 2;
 }
 
 @media (any-hover: hover) {
@@ -163,6 +165,7 @@ body {
     content: '';
     display: block;
     position: absolute;
+    z-index: 2;
 }
 
 @media (any-hover: hover) {
