@@ -16,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     background: #1f1f1f;
-    z-index: 1;
+    border-bottom 1px solid #3e3e3e
 }
 
 .profilePicture {
