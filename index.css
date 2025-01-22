@@ -33,7 +33,7 @@ body {
     cursor: pointer;
 }
 
-@media only screen (max-width: 950px) {
+@media only screen (max-width: 600px) {
     .profilePicture {
         width: 36px;
         height: 36px;
@@ -50,10 +50,17 @@ body {
     z-index: 2;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 600px) {
     .logo {
         width: 150px;
         height: 150px;
+    }
+}
+
+@media (max-width: 950px) {
+    .logo {
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -67,7 +74,7 @@ body {
     z-index: 2;
 }
 
-@media only screen (max-width: 950px) {
+@media only screen (max-width: 600px) {
     .burgerMenu {
         width: 36px;
         height: 36px;
