@@ -98,8 +98,10 @@ body {
 
 @media (max-width: 600px) {
     .closeWelcomeBox {
+        position: relative;
         top: 6rem;
-        right: -1rem;
+        right: 64px;
+        z-index: 1;
     }
 }
 
