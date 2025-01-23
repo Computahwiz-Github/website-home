@@ -107,6 +107,7 @@
 .linkToGithubSpan {
     align-items: center;    
     margin-right: 5%;
+    padding: 5px;
     background: rgba(255, 106, 20, 0.4);
     backdrop-filter: blur(10px);
     color: white;
@@ -130,6 +131,7 @@
 .linkToSiteSpan {
     align-items: center;
     margin-left: 5%;
+    padding: 5px;
     background: rgba(255, 106, 20, 0.4);
     backdrop-filter: blur(10px);
     color: white;
