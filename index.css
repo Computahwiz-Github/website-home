@@ -90,7 +90,7 @@ body {
     height: 20px;
     width: 20px;
     position: absolute;
-    top: -0.5rem;
+    top: -0.3rem;
     right: 0.25rem;
     cursor: pointer;
     z-index: 1;
@@ -152,7 +152,7 @@ body {
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     cursor: pointer;
     margin-bottom: 1em;
-    padding-bottom: 1em;
+    padding: 5px;
     display: flex;
     justify-content: center;
     text-align: center;
