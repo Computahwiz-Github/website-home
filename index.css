@@ -73,6 +73,7 @@ body {
     margin-right: auto;
     cursor: pointer;
     z-index: 2;
+    pointer-events: none;
 }
 
 @media only screen (max-width: 600px) {
@@ -96,9 +97,9 @@ body {
     z-index: 1;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 600px) {
     .closeWelcomeBox {
-        top: -0.25rem;
+        top: 0.5rem;
         right: 0.5rem;
     }
 }
