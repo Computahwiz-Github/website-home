@@ -98,8 +98,8 @@ body {
 
 @media (max-width: 600px) {
     .closeWelcomeBox {
-        top: 5rem;
-        right: 0rem;
+        top: 6rem;
+        right: 5rem;
     }
 }
 
