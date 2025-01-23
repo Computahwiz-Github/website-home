@@ -99,7 +99,7 @@ body {
 @media (max-width: 600px) {
     .closeWelcomeBox {
         position: absolute;
-        top: 6rem;
+        top: 1rem;
         right: 0.5rem;
         z-index: 1;
     }
