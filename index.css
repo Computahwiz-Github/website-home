@@ -100,7 +100,7 @@ body {
     .closeWelcomeBox {
         position: absolute;
         top: 6rem;
-        right: -64px;
+        right: 0.5rem;
         z-index: 1;
     }
 }
