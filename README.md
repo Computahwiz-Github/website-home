@@ -1,4 +1,4 @@
-(images/favicon.png)
+(images/castle/favicon.png)
 
 (images/Logo.png)
 
