@@ -71,6 +71,7 @@ body {
     padding: 5px;
     margin-left: 1em;
     margin-right: auto;
+    cursor: pointer;
     z-index: 2;
 }
 
