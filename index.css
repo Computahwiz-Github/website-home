@@ -16,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     background: #1f1f1f;
-    border-bottom 5px solid #3e3e3e
+    border-bottom: 5px solid #3e3e3e;
     z-index: 2;
 }
 
@@ -90,8 +90,8 @@ body {
     height: 20px;
     width: 20px;
     position: absolute;
-    top: -0.3rem;
-    right: 0.25rem;
+    top: 0.3rem;
+    right: 0.5rem;
     cursor: pointer;
     z-index: 1;
 }
