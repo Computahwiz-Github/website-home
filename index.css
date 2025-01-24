@@ -46,6 +46,9 @@ body {
     display: flex;
     margin-bottom: -2rem;
     padding: 5px;
+    z-index: -1;
+    cursor: none;
+    inherit: none;
 }
 
 @media (max-width: 600px) {
