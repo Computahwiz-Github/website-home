@@ -93,6 +93,7 @@ body {
     top: 0.5rem;
     right: 0.5rem;
     cursor: pointer;
+    z-index: 1;
 }
 
 @media only screen (max-width: 600px) {
@@ -100,7 +101,6 @@ body {
         position: absolute;
         top: 0.5rem;
         right: 0rem;
-        z-index: 1;
     }
 }
 
