@@ -40,15 +40,20 @@ body {
     }
 }
 
+.logoPressableArea {
+    width: 315px;
+    height: 75px;
+    cursor: pointer;
+    z-index: 2;
+}
+
 .logo {
     width: 315px;
     height: 100px;
     display: flex;
     margin-bottom: -2rem;
     padding: 5px;
-    z-index: -1;
-    cursor: none;
-    inherit: none;
+    z-index: 1;
 }
 
 @media (max-width: 600px) {
@@ -65,11 +70,11 @@ body {
     }
 }
 
-.centerHeaderColumn {
+/* .centerHeaderColumn {
     height: 75px;
     cursor: pointer;
     z-index: 2;
-}
+} */
 
 .burgerMenu {
     width: 48px;
