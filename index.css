@@ -96,10 +96,10 @@ body {
     z-index: 1;
 }
 
-@media (max-width: 600px) {
+@media only screen (max-width: 600px) {
     .closeWelcomeBox {
         position: absolute;
-        top: 1rem;
+        top: 12px;
         right: 0.5rem;
         z-index: 1;
     }
