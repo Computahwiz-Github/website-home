@@ -41,7 +41,7 @@ body {
 }
 
 .logo {
-    width: 945px;
+    width: 300px;
     height: 300px;
     display: flex;
     margin-bottom: 1rem;
@@ -52,14 +52,14 @@ body {
 
 @media (max-width: 600px) {
     .logo {
-        width: 475px;
+        width: 150px;
         height: 150px;
     }
 }
 
 @media (max-width: 950px) {
     .logo {
-        width: 630px;
+        width: 200px;
         height: 200px;
     }
 }
