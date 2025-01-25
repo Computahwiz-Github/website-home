@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- <script src='https://github.com/processing/p5.js/releases/download/v1.9.3/p5.js'></script> -->
+    <script src='../scripts/castle.js'></script>
+    <link rel="stylesheet" href="../styles/castle.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/castle/apple-touch-icon.png">
+    <link rel="icon" href="../images/castle/favicon-old.png">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Isaiah's Website</title>
+</head>
+<body>
+    <div class="acrylic background">
+        <style>
+            body {
+                height: 100%;
+                /* background-color: rgba(0, 0, 0, 0.795); */
+                background: url(../images/castle/background.jpg) center/cover no-repeat;
+                /* background: url(/NoiseAsset_256X256_PNG.png); */
+                /* background-size: cover; */
+                /* background-position: center; */
+                background-attachment: fixed;
+                /* background: rgba(0,0,0,0.5); */
+                /* -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px); */
+                margin: 0 0;
+            }
+
+           /* body::after {
+                background-color: rgba(0, 0, 0, 0.795);
+                opacity: .8;
+                content: '';
+                height: 100%;
+                display: block;
+                position: absolute;
+                width: 100%;
+            } */
+        </style>
+    </div>
+    <div class="flexContainer">
+        <h1 class="flexContainer header">Hello, World. This Is a Test Header!</h1>
+        <p class="flexContainer testParagraph" title="Click on a button">
+            Below, you should be able to press one of the <span class="buttonInstruction">- Animated Buttons - </span>to make a big ol' hoot and holler.
+        </p>
+        
+        <div class="linkButtonsWrapper">
+            <span class="linkButtonsWrapper linkToGithubSpan" onclick="openLinkToGithub()" title="Github Repos">
+                View Github Projects
+            </span>    
+            <span class="linkButtonsWrapper linkToSiteSpan" onclick="openLinkToSite()" title="Go Home">
+                Go To Homepage
+            </span>
+        </div>
+
+        <div class="buttonWrapper">
+            <button class="buttonWrapper fartButton" onclick="playMeAGoodFartJamie()"
+             title="See what happens when ye click me">Test Button That Makes Noise</button>
+            <button class="buttonWrapper otherFartButton" onclick="letMeHearAnotherSean()"
+             title="Plug your ears!">Another Button That Makes Noise</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta name="robots" content="noindex, nofollow" />
-    <script src='index.js'></script>
-    <link rel="stylesheet" href="index.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/castle/apple-touch-icon.png">
-    <link rel="icon" href="./images/castle/favicon-old.png">
+    <script src='./scripts/home.js'></script>
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" href="./images/favicon-old.png">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -16,26 +16,32 @@
     <div class="flexContainer">
         <header class="headerBar">
             <div class="leftHeaderColumn">
-                <img class="burgerMenu" src="./icons/menu-burger-horizontal.svg" title="Open Menu"/>
+                <button id="MenuButton" class="menuButton" title="Open Menu">
+                    <img id="Menu" class="menu" src="./icons/menu.svg"/>
+                </button>
             </div>
             <div class="centerHeaderColumn">
-                <div class="logoPressableArea" onclick="homeButtonClick()" title="Go Home"></div>
+                <div class="logoPressableArea" onclick="homeButtonClick()" title="Isaiah.digital : Home"></div>
                 <img class="logo" src="./images/Logo.png"/>
             </div>
             <div class="rightHeaderColumn">
-                <img class="profilePicture" src="./images/castle/favicon.png" onclick="profileButtonClick()" title="View Test Page"/>
+                <button id="AlertButton" class="alertButton" title="Notifications">
+                    <img id="AlertBox" class="alertBox" src="./icons/bell.svg"/>
+                    <label id="AlertCount" class="alertCount">1</label>
+                </button>
+                <img id="ProfilePicture" class="profilePicture" src="./images/favicon.png" onclick="profileButtonClick()" title="View Test Page"/>
             </div>
         </header>
 
-        <h1 class="welcomeBox" id="welcomeBox">Welcome, Check Out My Projects!
-            <img class="closeWelcomeBox" src="./icons/close-filled.svg" height="20px" width="20px" onclick="closeWelcomeBoxClick()" title="Close Message"/>
+        <h1 id="WelcomeBox" class="welcomeBox">Welcome, Check Out My Projects!
+            <img id="CloseBox" class="closeWelcomeBox" src="./icons/close-filled.svg" height="20px" width="20px" title="Close Message"/>
         </h1>
 
-        <div class="linkButtonsWrapper">
+        <div id="ButtonsWrapper" class="linkButtonsWrapper">
             <span class="linkButtonsWrapper linkToGithubSpan" onclick="openLinkToGithub()" title="Github Projects">
                 View Github Projects
             </span>    
-            <span class="linkButtonsWrapper linkToSiteSpan" onclick="openLinkToSite()" title="Home - www.Isaiah.digital">
+            <span class="linkButtonsWrapper linkToSiteSpan" onclick="openLinkToSite()" title="Isaiah.digital : Home">
                 Go To Homepage
             </span>
         </div>

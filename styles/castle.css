@@ -25,7 +25,7 @@
 }
 
 .header::after {
-    background: url(../images/NoiseAsset_256X256_PNG.png);
+    background: url(./images/NoiseAsset_256X256_PNG.png);
     opacity: .05;
     content: '';
     height: 100%;
@@ -65,7 +65,7 @@
 }
 
 .testParagraph::after {
-    background: url(../images/NoiseAsset_256X256_PNG.png);
+    background: url(./images/NoiseAsset_256X256_PNG.png);
     opacity: .05;
     content: '';
     height: 100%;
@@ -141,7 +141,7 @@
 }
 
 .linkToSiteSpan::after {
-    background: url(../images/NoiseAsset_256X256_PNG.png);
+    background: url(./images/NoiseAsset_256X256_PNG.png);
     opacity: .05;
     content: '';
     display: block;
