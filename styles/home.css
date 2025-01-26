@@ -156,10 +156,23 @@ body {
         height: 75px;
     }
 
+    .alertButton {
+        margin-left: 1rem;
+    }
+
+    .welcomeBox {
+        width: 75%;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 10%;
+        border-radius: 25px;
+    }
+
     .closeWelcomeBox {
-        position: absolute;
+        position: relative;
         top: 0.5rem;
-        right: 0rem;
+        right: 2rem;
+        z-index: 3;
     }
 }
 
@@ -236,14 +249,7 @@ body {
 }
 
 @media (max-width: 950px) {
-    .welcomeBox {
-        width: 75%;
-        font-size: 1.5rem;
-        margin-top: 1rem;
-        margin-bottom: 10%;
-        border-radius: 25px;
-        z-index: 0;
-    }
+
 }
 
 .linkButtonsWrapper {
