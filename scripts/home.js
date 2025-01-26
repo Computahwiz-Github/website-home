@@ -272,6 +272,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function menuMouseUp () {
         menu.style.scale = "1";
     }
+    function menuClick () {
+        if (menuButton.src == "./icons/menu.svg") {
+            menu.style.borderRadius = "10px";
+            menu.style.boxShadow = "0px 0px 10px 0px rgb(0, 0, 0, 0.5)";
+            menu.style.backgroundColor = "#2e2e2e";
+        }
+    }
     function alertMouseDown () {
         alertButtonElement.style.backgroundColor = "#4e4e4e";
         alertBoxElement.style.scale = "0.9";
@@ -296,6 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const profilePicture = document.getElementById("ProfilePicture");
     const menu = document.getElementById("Menu");
+    const menuButton = document.getElementById("MenuButton");
 
     const processAlert = debounce(() => debounceAlert());
     const processClick = debounce(() => debounceClick());
@@ -310,6 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
     alertButtonElement.addEventListener("mouseup", alertMouseUp);
     menu.addEventListener("mousedown", menuMouseDown);
     menu.addEventListener("mouseup", menuMouseUp);
+    menu.addEventListener("click", menuClick);
     profilePicture.addEventListener("mousedown", profileMouseDown);
     profilePicture.addEventListener("mouseup", profileMouseUp);
     welcomeBoxElement.addEventListener("mousedown", closeBoxMouseDown);
