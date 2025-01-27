@@ -33,14 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const alertBoxElement = document.getElementById("AlertBox");
     const alertCountElement = document.getElementById("AlertCount");
     const closeBoxElement = document.getElementById("CloseBox");
-    const welcomeBoxElement = document.getElementById("WelcomeBox");
+    const welcomeBoxElement = document.getElementById("WelcomeMessage");
     const buttonWrapper = document.getElementById("ButtonsWrapper");
     let menuClicked = false;
     let alertClicked = false;
     let closeBoxClicked = false;
 
     document.addEventListener("click", () => {
-        if (alertBoxElement.classList.value.includes("active") && !alertButtonElement.classList.value.includes("active")) {
+        if (alertBoxElement.classList.value.includes("active") &&
+            !alertButtonElement.classList.value.includes("active")) {
             //alertBoxElement.classList.toggle("active");
             alertBoxElement.src = "./icons/bell.svg";
             console.log("NotAlertClicked: " + alertClicked);
@@ -135,7 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (welcomeBoxElement.style.display == "none") {
             alertButtonElement.style.pointerEvents = "none";
+            closeBoxElement.style.pointerEvents = "none";
             setTimeout(() => {alertButtonElement.style.setProperty('pointer-events', 'auto')}, 400);
+            setTimeout(() => {closeBoxElement.style.setProperty('pointer-events', 'auto')}, 400);
 
             buttonWrapper.style.position = "static";
             buttonWrapper.style.marginTop = "0rem";
@@ -154,8 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //welcomeBoxElement.style.transformOrigin = "120% -4.5rem 5rem";
             const alertRect = alertBoxElement.getBoundingClientRect();
             //console.log(alertRect);
-            const alertX = (alertRect.x / 20.25);
-            const alertY = -(alertRect.height / 8);
+            const alertX = (alertRect.x / 20.75);
+            const alertY = -(alertRect.height / 12);
 
             welcomeBoxElement.style.transformOrigin = `${alertX}rem ${alertY}rem`;
             
@@ -176,46 +179,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    
-
-    function debounceClick() {
-        alertClicked = !alertClicked;
-        //alertBoxElement.classList.toggle("active");
-        //console.log("clickAlertEnter: " + alertClicked);
-        /* if (!alertBoxElement.classList.value.includes("active")) {
-            alertBoxElement.classList.toggle("active");
-        } */
-        
-        if (alertBoxElement.classList.value.includes("active")) {
-            alertBoxElement.classList.toggle("active");
-            alertBoxElement.src = "./icons/bell.svg";
-            //console.log("activeAlertClick: " + alertBoxElement.classList.value.includes("active"));
-        }
-        /* else if (!alertBoxElement.classList.value.includes("active") && alertClicked) {
-            alertBoxElement.toggleAttribute("active");
-            processCloseBox();
-        } */
-        /* else if (!alertBoxElement.classList.value.includes("active") && !alertClicked && !welcomeBoxElement.style.display == "none") {
-            //console.log("activeAlertClickq: " + alertBoxElement.classList.value.includes("active"));
-        } */
-        else if (!alertBoxElement.classList.value.includes("active") && !alertClicked) {
-            alertBoxElement.classList.toggle("active");
-            alertBoxElement.src = "./icons/bell-filled.svg";
-        }
-        processAlert();
-    }
-
     function debounceCloseBox() {
-        //const welcomeBoxElement = document.getElementById("WelcomeBox");
-        //const alertButtonElement = document.getElementById("AlertButton");
-        //const alertBoxElement = document.getElementById("AlertBox");
-        //const alertCountElement = document.getElementById("AlertCount");
-        //const buttonWrapper = document.getElementById("ButtonsWrapper");
         alertClicked = !alertClicked;
         processAlert();
-        if (welcomeBoxElement.classList.value == "welcomeBox") {
+        if (welcomeBoxElement.classList.value == "welcomeMessage") {
             alertButtonElement.style.setProperty('pointer-events', 'none');
+            closeBoxElement.style.setProperty('pointer-events', 'none');
             setTimeout(() => {alertButtonElement.style.setProperty('pointer-events', 'auto')}, 400);
+            setTimeout(() => {closeBoxElement.style.setProperty('pointer-events', 'auto')}, 400);
             /* if (alertBoxElement.classList.value.includes("active")) {
                 alertBoxElement.classList.toggle("active");
                 alertBoxElement.src = "./icons/bell.svg";
@@ -237,8 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const alertElement = document.getElementById("AlertBox");
             const alertRect = alertElement.getBoundingClientRect();
             //console.log(alertRect);
-            const alertX = (alertRect.x / 20.25);
-            const alertY = -(alertRect.height / 8);
+            const alertX = (alertRect.x / 20.75);
+            const alertY = -(alertRect.height / 12);
     
             welcomeBoxElement.style.transformOrigin = `${alertX}rem ${alertY}rem`;
             
@@ -306,7 +277,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.getElementById("MenuButton");
 
     const processAlert = debounce(() => debounceAlert());
-    const processClick = debounce(() => debounceClick());
     const processMouseEnter = debounce(() => debounceMouseEnter());
     const processMouseLeave = debounce(() => debounceMouseLeave());
     const processCloseBox = debounce(() => debounceCloseBox());
@@ -323,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
     profilePicture.addEventListener("mouseup", profileMouseUp);
     welcomeBoxElement.addEventListener("mousedown", closeBoxMouseDown);
     welcomeBoxElement.addEventListener("mouseup", closeBoxMouseUp);
-    welcomeBoxElement.addEventListener("click", processCloseBox);
+    closeBoxElement.addEventListener("click", processCloseBox);
 
     closeBoxElement.addEventListener('mouseenter', () => {
         closeBoxElement.src = "./icons/close-selected.svg";
