@@ -255,43 +255,33 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     cursor: pointer;
-    margin-bottom: 1em;
-    padding: 5px;
+    padding: 0.75rem;
     display: flex;
-    justify-content: center;
     text-align: center;
     border-radius: 15px;
+    background: rgba(255, 106, 20, 0.5);
 }
 
 .linkToGithubSpan {
     align-items: center;    
-    margin-right: 5%;
-    background: rgba(255, 106, 20, 0.4);
+    margin-right: 1rem;
+    background: rgba(10, 132, 256, 1);
     backdrop-filter: blur(10px);
     color: white;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
-.linkToGithubSpan::after {
-    background: url(../images/NoiseAsset_256X256_PNG.png);
-    opacity: .05;
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: 2;
-}
-
 @media (any-hover: hover) {
-    .linkToGithubSpan:hover {
-        background: rgba(255, 106, 20, 0.75);
+    .linkToGithubSpan:hover, .linkToSiteSpan:hover {
+        background: rgba(100, 210, 256, 1);
     }
 }
 
 .linkToSiteSpan {
     align-items: center;
-    margin-left: 5%;
-    background: rgba(255, 106, 20, 0.4);
+    margin-left: 1rem;
+    background: rgba(10, 132, 256, 1);
     backdrop-filter: blur(10px);
     color: white;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
@@ -305,10 +295,4 @@ body {
     display: block;
     position: absolute;
     z-index: 2;
-}
-
-@media (any-hover: hover) {
-    .linkToSiteSpan:hover {
-        background: rgba(255, 106, 20, 0.75);
-    }
 }
