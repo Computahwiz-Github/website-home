@@ -159,6 +159,21 @@ body {
     .alertButton {
         margin-left: 5rem;
     }
+
+    .welcomeMessage {
+        width: 80%;
+        margin-top: 1rem;
+        margin-bottom: 10%;
+    }
+
+    .welcomeBox {
+        font-size: 1.25rem;
+        border-radius: 25px;
+    }
+
+    .linkButtonsWrapper {
+        font-size: 0.5rem;
+    }
 }
 
 @media only screen and (max-width: 950px) {
@@ -172,6 +187,7 @@ body {
     }
 
     .welcomeMessage {
+        width: 80%;
         margin-top: 1rem;
         margin-bottom: 10%;
     }
@@ -220,6 +236,7 @@ body {
 }
 
 .welcomeBox {
+    user-select: none;
     white-space: wrap;
     font-size: 2rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 
@@ -255,6 +272,7 @@ body {
 }
 
 .linkButtonsWrapper {
+    user-select: none;
     font-size: 1.25rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
