@@ -183,7 +183,7 @@ body {
     }
 
     .alertButton {
-        margin-left: 1rem;
+        margin-left: 2rem;
     }
 
     .welcomeBox {
@@ -195,7 +195,9 @@ body {
     }
 
     .closeWelcomeBox {
-        position: relative;
+        height: 20px;
+        width: 20px;
+        position: absolute;
         top: 0.5rem;
         right: 2rem;
         z-index: 3;
@@ -239,7 +241,7 @@ body {
     z-index: 1;
 }
 
-.welcomeBox, .welcomeBox:enabled {
+.welcomeBox {
     white-space: wrap;
     width: 55%;
     height: fit-content;
@@ -260,7 +262,7 @@ body {
     z-index: 0;
 }
 
-.welcomeBox::after, .welcomeBox.enabled::after {
+.welcomeBox::after {
     opacity: .05;
     content: '';
     height: 100%;
