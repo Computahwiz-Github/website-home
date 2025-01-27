@@ -157,11 +157,10 @@ body {
     }
 
     .alertButton {
-        margin-left: 10rem;
+        margin-left: 5rem;
     }
 
     .welcomeMessage {
-        width: 75%;
         margin-top: 1rem;
         margin-bottom: 10%;
     }
@@ -179,11 +178,10 @@ body {
     }
 
     .alertButton {
-        margin-left: 2rem;
+        margin-left: 5rem;
     }
 
     .welcomeMessage {
-        width: 75%;
         margin-top: 1rem;
         margin-bottom: 10%;
     }
