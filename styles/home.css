@@ -158,10 +158,11 @@ body {
 
     .alertButton {
         margin-left: 5rem;
+        margin-right: 1rem;
     }
 
     .welcomeMessage {
-        width: 80%;
+        width: 100%;
         margin-top: 1rem;
         margin-bottom: 10%;
     }
@@ -187,7 +188,7 @@ body {
     }
 
     .welcomeMessage {
-        width: 80%;
+        width: 100%;
         margin-top: 1rem;
         margin-bottom: 10%;
     }
@@ -281,7 +282,6 @@ body {
     display: flex;
     text-align: center;
     border-radius: 15px;
-    background: rgba(255, 106, 20, 0.5);
 }
 
 .linkToGithubSpan {
