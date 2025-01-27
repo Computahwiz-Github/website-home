@@ -155,20 +155,6 @@ body {
         width: 235px;
         height: 75px;
     }
-
-    .alertButton {
-        margin-left: 5rem;
-    }
-
-    .welcomeMessage {
-        margin-top: 1rem;
-        margin-bottom: 10%;
-    }
-
-    .welcomeBox {
-        font-size: 1.5rem;
-        border-radius: 25px;
-    }
 }
 
 @media only screen and (max-width: 950px) {
@@ -187,7 +173,7 @@ body {
     }
 
     .welcomeBox {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         border-radius: 25px;
     }
 
