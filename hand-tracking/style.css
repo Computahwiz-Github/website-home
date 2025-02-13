@@ -1,0 +1,15 @@
+html, body {
+  
+  margin: 0;
+  padding: 0;
+  
+}
+canvas {
+  display: block;
+  transform: scale(0.75);
+  position: relative;
+}
+
+video {
+  transform: scale(0.75);
+}

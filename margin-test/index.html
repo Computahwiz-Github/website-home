@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow" />
+    <script src='../scripts/margin-test.js'></script>
+    <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script> <!-- Github Repo Cards -->
+    <link rel="stylesheet" href="../styles/margin-test.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+    <link rel="icon" href="../images/favicon-old.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - Isaiah's Website</title>
+</head>
+<body>
+    <header class="headerContainer">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li>
+                    <button id="MenuButton" class="menuButton" title="Open Menu">
+                        <img id="Menu" class="menu" src="../icons/menu.svg" />
+                    </button>
+                    <nav id="MenuContent" class="menuContent">
+                        <li>
+                            <label id="MenuContentLabel" class="menuContentLabel">Menu</label>
+                        </li>
+                        <li>
+                            <a id="EnableOutlinesLabel" class="enableOutlinesLabel" title="Toggle Border Outline of Divs" onclick="enableOutlinesLabelToggle()">
+                                <img src="../icons/dashed-square.svg" class="outlinesLabelImage" width="24px" />
+                                <label class="outlinesLabel">Enable Borders</label>
+                                <label id="ToggleSwitch" class="toggleSwitch">
+                                    <input id="CheckBox" type="checkbox" onclick="enableOutlinesClick()">
+                                    <span class="slider round" title="Toggle Div Borders"></span>
+                                </label>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="ShowFamilyProjects" class="showFamilyProjects" title="Show Family Projects" onclick="showFamilyProjectsClick()">
+                                <img src="../icons/tools.svg" class="showFamilyProjectsImage" width="24px" />
+                                <label class="familyProjectsLabel">Family Projects</label>
+                            </a>
+                        </li>
+                    </nav>
+                </li>
+                <li>
+                    <div class="logoPressableArea" onclick="homeButtonClick()" title="Isaiah.digital : Home"></div>
+                    <img class="logo" src="../images/Logo.png" />
+                    <img class="headerSeparator" src="../images/Header Separator.svg" />
+                </li>
+                <li>
+                    <button id="AlertButton" class="alertButton" title="Notifications">
+                        <img id="AlertBox" class="alertBox" src="../icons/bell.svg" />
+                        <label id="AlertCount" class="alertCount">1</label>
+                    </button>
+                </li>
+                <li>
+                    <img id="ProfilePicture" class="profilePicture" src="../images/favicon.png" onclick="profileButtonClick()" title="View Test Page" />
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="centerBodyColumn">
+        <img class="bodyImages" src="../auto-populate-images/uploaded images/303084.png" loading="lazy" />
+        <img class="bodyImages" src="../auto-populate-images//uploaded images/appa.jpg" loading="lazy" />
+        <div class="blur-load" style="background-image: url(../auto-populate-images/uploaded\ images/carinaTiny.png);">
+            <img class="bodyImages" src="../auto-populate-images//uploaded images/carina.png" loading="lazy" />
+        </div>
+        <img class="bodyImages" src="../auto-populate-images//uploaded images/castle.jpg" loading="lazy" />
+        <img class="bodyImages" src="../auto-populate-images//uploaded images/gioele-muscolino-img-6.jpg" loading="lazy" />
+        <img class="bodyImages" src="../auto-populate-images//uploaded images/Saturn.png" loading="lazy" />
+        <img class="bodyImages" src="../auto-populate-images//uploaded images/tower.jpg" loading="lazy" />
+        <img class="bodyImages" src="../auto-populate-images//uploaded images/Webb Unlocks Secrets of One of the Most Distant Galaxies Ever Seen.png" loading="lazy" />
+    </div>
+    <div id="LowerBody" class="lowerBody"></div>
+    <div class="projectCards">
+        <div class="repo-card" data-repo="Computahwiz-Github/website-home" data-theme="dark-theme"></div>
+    </div>
+</body>
+</html>

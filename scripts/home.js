@@ -1,31 +1,3 @@
-function openLinkToGithub() {
-    console.log('Clicked Span');
-    location.assign("https://github.com/Computahwiz-Github");
-}
-
-function openLinkToSite() {
-    console.log('Clicked Span');
-    location.assign("./");
-}
-
-function profileButtonClick() {
-    console.log("Profile Button Clicked");
-    location.assign("./castle/");
-}
-
-function homeButtonClick() {
-    console.log("Home Button Clicked");
-    location.assign("./");
-}
-
-function debounce(func, timeout = 50) {
-    let timer;
-    return (...args) => {
-        clearTimeout(timer);
-        timer = setTimeout(() => { func.apply(this, args); }, timeout);
-    };
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const menuButtonElement = document.getElementById("MenuButton");
     const menuElement = document.getElementById("Menu");
@@ -33,11 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const alertBoxElement = document.getElementById("AlertBox");
     const alertCountElement = document.getElementById("AlertCount");
     const closeBoxElement = document.getElementById("CloseBox");
-    const welcomeBoxElement = document.getElementById("WelcomeMessage");
+    const welcomeMessageElement = document.getElementById("WelcomeMessage");
     const buttonWrapper = document.getElementById("ButtonsWrapper");
+    const toggleSwitch = document.getElementById("ToggleSwitch");
+    const enableOutlinesLabel = document.getElementById("EnableOutlinesLabel");
+    const menuContentElement = document.getElementById("MenuContent");
     let menuClicked = false;
     let alertClicked = false;
-    let closeBoxClicked = false;
+
+    checkOutlinesToggled(toggleSwitch);
 
     document.addEventListener("click", () => {
         if (alertBoxElement.classList.value.includes("active") &&
@@ -69,14 +45,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuButtonElement.addEventListener('click', () => {
         menuClicked = !menuClicked;
-        if (!menuElement.classList.value.includes(":active")) {
+        toggleSwitch.classList.toggle("visible");
+        enableOutlinesLabel.classList.toggle("visible");
+        menuContentElement.classList.toggle("visible");
+
+        if (!menuElement.classList.value.includes("active")) {
             menuElement.classList.toggle("active");
             menuElement.src = "./icons/menu-selected.svg";
+            menuButtonElement.style.boxShadow = "0px 0px 10px 0px rgb(0, 0, 0, 0.5)";
+            menuButtonElement.style.backgroundColor = "#2e2e2e";
+            menuButtonElement.style.borderRadius = "10px";
         }
-        else if (menuElement.classList.value.includes(":active")) {
+        else if (menuElement.classList.value.includes("active")) {
             menuElement.classList.toggle("active");
             menuElement.src = "./icons/menu.svg";
+            menuButtonElement.style.boxShadow = "";
+            menuButtonElement.style.backgroundColor = "";
         }
+    });
+
+    toggleSwitch.addEventListener("mouseenter", () => {
+        enableOutlinesLabel.style.backgroundColor = "#4e4e4e";
+    });
+    toggleSwitch.addEventListener("mouseleave", () => {
+        enableOutlinesLabel.style.backgroundColor = "";
     });
 
     function debounceMouseEnter() {
@@ -124,7 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (alertBoxElement.classList.value.includes("active") && alertClicked) {
             alertBoxElement.classList.toggle("active");
         }
-        else if (!alertBoxElement.classList.value.includes("active") && alertClicked && !alertButtonElement.classList.value.includes("active")) {
+        else if (!alertBoxElement.classList.value.includes("active") && alertClicked && 
+        !alertButtonElement.classList.value.includes("active")) {
             alertBoxElement.classList.toggle("active");
         }
         else if (alertBoxElement.classList.value.includes("active") && !alertClicked) {
@@ -133,8 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (!alertBoxElement.classList.value.includes("active") && !alertClicked) {
             //alertBoxElement.classList.toggle("active");
         }
-
-        if (welcomeBoxElement.style.display == "none") {
+        console.log("hide" + welcomeMessageElement.classList.contains("visible") );
+        if (welcomeMessageElement.classList.contains("visible")) {
             alertButtonElement.style.pointerEvents = "none";
             closeBoxElement.style.pointerEvents = "none";
             setTimeout(() => {alertButtonElement.style.setProperty('pointer-events', 'auto')}, 400);
@@ -144,36 +137,37 @@ document.addEventListener('DOMContentLoaded', () => {
             buttonWrapper.style.marginTop = "0rem";
             buttonWrapper.style.marginBottom = "1rem";
 
-            welcomeBoxElement.style.zIndex = "0";
-            welcomeBoxElement.style.display = "flex";
+            welcomeMessageElement.classList.toggle("visible");
+            welcomeMessageElement.style.zIndex = "0";
 
             var myTimeout1 = setTimeout(moveAlert, 5);
 
             function moveAlert() {
-                welcomeBoxElement.style.transform = "scale(0.25)";
-                welcomeBoxElement.style.transition = "all 150ms linear";      
+                welcomeMessageElement.style.transform = "scale(0.25)";
+                welcomeMessageElement.style.transition = "all 150ms linear";      
             }
 
             //welcomeBoxElement.style.transformOrigin = "120% -4.5rem 5rem";
             const alertRect = alertBoxElement.getBoundingClientRect();
             //console.log(alertRect);
-            const alertX = (alertRect.x / 20.75);
+            const alertX = (alertRect.x / 40);
             const alertY = -(alertRect.height / 12);
 
-            welcomeBoxElement.style.transformOrigin = `${alertX}rem ${alertY}rem`;
+            welcomeMessageElement.style.transformOrigin = `${alertX}rem ${alertY}rem`;
             
             myTimeout1 = setTimeout(shrinkAlert, 100);
 
             function shrinkAlert() {
-                welcomeBoxElement.style.transform = "scale(1)";
-                welcomeBoxElement.style.transition = "all 100ms ease-in-out";
+                welcomeMessageElement.style.transform = "scale(1)";
+                welcomeMessageElement.style.transition = "all 100ms ease-in-out";
                 //alertBoxElement.src = "./icons/bell-filled.svg";
             }
 
             myTimeout1 = setTimeout(removeAlert, 350);          
 
             function removeAlert() {
-                alertCountElement.style.display = "none";
+                alertCountElement.classList.toggle("visible");
+                console.log("remove" + welcomeMessageElement.classList.toString() );
                 //console.log(alertButtonElement.classList.value.toString());
             }
         }
@@ -182,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function debounceCloseBox() {
         alertClicked = !alertClicked;
         processAlert();
-        if (welcomeBoxElement.classList.value == "welcomeMessage") {
+        if (welcomeMessageElement.classList.value == "welcomeMessage") {
             alertButtonElement.style.setProperty('pointer-events', 'none');
             closeBoxElement.style.setProperty('pointer-events', 'none');
             setTimeout(() => {alertButtonElement.style.setProperty('pointer-events', 'auto')}, 400);
@@ -192,7 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 alertBoxElement.src = "./icons/bell.svg";
             } */
             
-            welcomeBoxElement.style.zIndex = "3";
+            welcomeMessageElement.style.zIndex = "3";
+            alertCountElement.classList.toggle("visible");
             
             buttonWrapper.style.position = "absolute";
             buttonWrapper.style.marginTop = "7rem";
@@ -200,33 +195,38 @@ document.addEventListener('DOMContentLoaded', () => {
             var myTimeout = setTimeout(moveAlert, 5);
     
             function moveAlert() {
-                welcomeBoxElement.style.transform = "scale(0.25)";
-                welcomeBoxElement.style.transition = "all 100ms ease-in-out";            
+                welcomeMessageElement.style.transform = "scale(0.25)";
+                welcomeMessageElement.style.transition = "all 100ms ease-in-out";            
             }
     
             //welcomeBoxElement.style.transformOrigin = "120% -4.5rem 5rem";
             const alertElement = document.getElementById("AlertBox");
             const alertRect = alertElement.getBoundingClientRect();
             //console.log(alertRect);
-            const alertX = (alertRect.x / 20.75);
-            const alertY = -(alertRect.height / 12);
+            let alertX = (alertRect.x / 26);
+            let alertY = -(alertRect.height / 12);
+            console.log(document.body.offsetWidth);
+            if (document.body.offsetWidth <= 1250) {
+                alertX = (alertRect.x / 24);
+                alertY = -(alertRect.height / 20);
+            }
     
-            welcomeBoxElement.style.transformOrigin = `${alertX}rem ${alertY}rem`;
+            welcomeMessageElement.style.transformOrigin = `${alertX}rem ${alertY}rem`;
             
             myTimeout = setTimeout(shrinkAlert, 100);
     
             function shrinkAlert() {
-                welcomeBoxElement.style.transform = "scale(0)";
-                welcomeBoxElement.style.transition = "all 150ms linear";
+                welcomeMessageElement.style.transform = "scale(0)";
+                welcomeMessageElement.style.transition = "all 150ms linear";
                 //alertElement.src = "./icons/bell-filled.svg";
             }
             
             myTimeout = setTimeout(addAlert, 350);
-            alertCountElement.style.display = "flex";
             
             function addAlert() {
                 //welcomeBoxElement.classList.toggle("disabled");
-                welcomeBoxElement.style.display = "none";
+                welcomeMessageElement.classList.toggle("visible");
+                console.log("alert" + welcomeMessageElement.classList.toString() );
             }
         }
     }
@@ -269,8 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function closeBoxMouseUp () {
         closeBoxElement.style.scale = "1";
-    }
-    
+    }    
 
     const profilePicture = document.getElementById("ProfilePicture");
     const menu = document.getElementById("Menu");
@@ -291,8 +290,8 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.addEventListener("click", menuClick);
     profilePicture.addEventListener("mousedown", profileMouseDown);
     profilePicture.addEventListener("mouseup", profileMouseUp);
-    welcomeBoxElement.addEventListener("mousedown", closeBoxMouseDown);
-    welcomeBoxElement.addEventListener("mouseup", closeBoxMouseUp);
+    welcomeMessageElement.addEventListener("mousedown", closeBoxMouseDown);
+    welcomeMessageElement.addEventListener("mouseup", closeBoxMouseUp);
     closeBoxElement.addEventListener("click", processCloseBox);
 
     closeBoxElement.addEventListener('mouseenter', () => {
@@ -315,3 +314,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }); */
 });
+
+function openLinkToGithub() {
+    console.log('Clicked Span');
+    location.assign("https://github.com/Computahwiz-Github");
+}
+
+function openLinkToSite() {
+    console.log('Clicked Span');
+    location.assign("./");
+}
+
+function profileButtonClick() {
+    console.log("Profile Button Clicked");
+    location.assign("./castle/");
+}
+
+function homeButtonClick() {
+    console.log("Home Button Clicked");
+    location.assign("./");
+}
+
+function checkOutlinesToggled(toggleSwitch) {
+    let switchToggled = toggleSwitch.getElementsByTagName("input")[0].checked;
+    if (switchToggled) {
+        console.log("Div Borders Enabled: " + switchToggled);
+        enableOutlinesClick();
+    }
+    else {
+        const divElements = document.querySelectorAll('div');
+        console.log("Div Borders Enabled: " + switchToggled);
+        console.log("Borders: " + divElements[0].style.outline.toString());
+    }
+}
+
+function enableOutlinesClick() {
+    let divElements = document.querySelectorAll('div');
+
+    divElements.forEach(divElement => {
+        if (divElement.style.outline == "") {
+            divElement.style.outline = "dashed red";
+        }
+        else {
+            divElement.style.outline = "";
+        }
+        console.log("Borders: " + divElements[0].style.outline.toString());
+      });
+}
+function debounce(func, timeout = 50) {
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+}
